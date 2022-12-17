@@ -1,23 +1,18 @@
 <template>
   <v-app id="inspire">
-    <bar-app />
-    <v-main class="grey lighten-4">
-      <v-container class="py-8 px-6" fluid>
-        <router-view></router-view> </v-container
-      ><footer-app />
+    <v-main class="grey lighten-4"
+      ><component :is="layout">
+        <v-container> <router-view :layout.sync="layout" /> </v-container>
+      </component>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import BarApp from "./components/BarApp.vue";
-import FooterApp from "./components/FooterApp.vue";
-
 export default {
+  components: {},
   data: () => ({
-    cards: ["Today", "Yesterday"],
-    drawer: false,
+    layout: "div",
   }),
-  components: { BarApp, FooterApp },
 };
 </script>

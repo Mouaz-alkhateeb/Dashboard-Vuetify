@@ -1,5 +1,5 @@
 <template>
-  <div class="card mt-5 pb-6">
+  <div class="card">
     <div class="pa-3 card-header mt-2">
       <h6>{{ title }}</h6>
       <p class="text-sm">

@@ -51,7 +51,6 @@
         </v-form>
       </v-card>
     </v-col>
-
     <v-col cols="12" md="4">
       <v-card class="text-center" flat>
         <v-img height="250" src="../assets/bg-profile.jpg">
@@ -60,16 +59,13 @@
               <img src="https://cdn.vuetifyjs.com/images/john.jpg" />
             </v-avatar> </v-responsive
         ></v-img>
-
         <v-card-text class="text-center">
           <h2 class="display-2 font-weight-light mb-3">Alec Thompson</h2>
-
           <p class="font-weight-light grey--text">
             Don't be scared of the truth because we need to restart the human
             foundation in truth And I love you like Kanye loves Kanye I love
             Rick Owens’ bed design but the back is...
           </p>
-
           <v-btn color="primary" rounded outlined class="mr-0"> Follow </v-btn>
         </v-card-text>
       </v-card>
@@ -78,7 +74,10 @@
 </template>
 
 <script>
+import indexLayout from "../layouts/indexLayout.vue";
 export default {
-  //
+  created() {
+    this.$emit("update:layout", indexLayout);
+  },
 };
 </script>

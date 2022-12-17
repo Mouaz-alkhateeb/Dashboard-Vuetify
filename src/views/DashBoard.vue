@@ -38,7 +38,7 @@
         </v-card>
       </v-col>
       <v-col lg="5" cols="12">
-        <v-card class="mx-auto" max-width="460">
+        <v-card class="mx-auto pb-3" max-width="460">
           <v-card dark flat>
             <v-img
               src="https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -145,8 +145,12 @@
 <script>
 import PopUp from "../components/PopUp.vue";
 import GradientLineChart from "../components/GradientLineChart.vue";
+import indexLayout from "../layouts/indexLayout.vue";
 export default {
   components: { PopUp, GradientLineChart },
+  created() {
+    this.$emit("update:layout", indexLayout);
+  },
   data() {
     return {
       activityLog: [

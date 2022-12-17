@@ -1,7 +1,7 @@
 <template>
   <v-footer padless>
     <v-card class="flex text-center" flat>
-      <v-card-text class="py-2 text-center">
+      <v-card-text class="text-center">
         <strong class="font-weight-bold">Design By Mouaz Alkhateeb</strong>
         --{{ new Date().getFullYear() }}
       </v-card-text>

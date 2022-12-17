@@ -224,7 +224,11 @@
 </template>
 
 <script>
+import LoginLayout from "../layouts/LoginLayout.vue";
 export default {
+  created() {
+    this.$emit("update:layout", LoginLayout);
+  },
   data() {
     return {
       show1: false,
